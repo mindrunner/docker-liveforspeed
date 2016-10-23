@@ -30,4 +30,4 @@ RUN curl -o lfs-server.zip https://www.lfs.net/download/LFS_S3_DCON_6Q.zip \
     && rm lfs-server.zip \
     && rm setup.cfg
     
-CMD wine DCon.exe /cfg=setup.cfg
+CMD wine DCon.exe
