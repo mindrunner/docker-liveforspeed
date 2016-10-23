@@ -1,20 +1,20 @@
 lfs-demo:
   image: runmymind/liveforspeed
   volumes:
-    - /home/le/lfs/config/setup-demo.cfg:/home/lfs/data/setup.cfg
+    - ~/lfs/setup-demo.cfg:/home/lfs/data/setup.cfg
   restart: always
 lfs-s1:
   image: runmymind/liveforspeed
   volumes:
-    - /home/le/lfs/config/setup-s1.cfg:/home/lfs/data/setup.cfg
+    - ~/lfs/setup-s1.cfg:/home/lfs/data/setup.cfg
   restart: always  
 lfs-s2:
   image: runmymind/liveforspeed
   volumes:
-    - /home/le/lfs/config/setup-s2.cfg:/home/lfs/data/setup.cfg
+    - ~/lfs/setup-s2.cfg:/home/lfs/data/setup.cfg
   restart: always
 lfs-s3:
   image: runmymind/liveforspeed
   volumes:
-    - /home/le/lfs/config/setup-s3.cfg:/home/lfs/data/setup.cfg
+    - ~/lfs/setup-s3.cfg:/home/lfs/data/setup.cfg
   restart: always
