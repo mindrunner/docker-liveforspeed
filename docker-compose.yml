@@ -3,22 +3,34 @@ lfs-demo:
   volumes:
     - ~/lfs/setup-demo.cfg:/home/lfs/app/setup.cfg
     - ~/lfs/welcome.txt:/home/lfs/app/welcome.txt
+  ports:
+    - "63390:63390"
+    - "63390/udp:63390/udp"
   restart: always
 lfs-s1:
   image: runmymind/liveforspeed
   volumes:
     - ~/lfs/setup-s1.cfg:/home/lfs/app/setup.cfg
-    - ~/lfs/welcome.txt:/home/lfs/app/welcome.txt    
+    - ~/lfs/welcome.txt:/home/lfs/app/welcome.txt
+  ports:
+    - "63391:63391"
+    - "63391/udp:63391/udp"
   restart: always  
 lfs-s2:
   image: runmymind/liveforspeed
   volumes:
     - ~/lfs/setup-s2.cfg:/home/lfs/app/setup.cfg
     - ~/lfs/welcome.txt:/home/lfs/app/welcome.txt    
+  ports:
+    - "63392:63392"
+    - "63392/udp:63392/udp"
   restart: always
 lfs-s3:
   image: runmymind/liveforspeed
   volumes:
     - ~/lfs/setup-s3.cfg:/home/lfs/app/setup.cfg
     - ~/lfs/welcome.txt:/home/lfs/app/welcome.txt    
+  ports:
+    - "63393:63393"
+    - "63393/udp:63393/udp"
   restart: always
