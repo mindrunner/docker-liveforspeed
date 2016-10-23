@@ -22,7 +22,6 @@ RUN useradd -ms /bin/bash lfs
 USER lfs
 
 RUN mkdir /home/lfs/app
-RUN mkdir /home/lfs/data
 
 WORKDIR /home/lfs/app
 
