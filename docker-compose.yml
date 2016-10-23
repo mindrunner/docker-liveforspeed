@@ -2,19 +2,23 @@ lfs-demo:
   image: runmymind/liveforspeed
   volumes:
     - ~/lfs/setup-demo.cfg:/home/lfs/app/setup.cfg
+    - ~/lfs/welcome.txt:/home/lfs/app/welcome.txt
   restart: always
 lfs-s1:
   image: runmymind/liveforspeed
   volumes:
     - ~/lfs/setup-s1.cfg:/home/lfs/app/setup.cfg
+    - ~/lfs/welcome.txt:/home/lfs/app/welcome.txt    
   restart: always  
 lfs-s2:
   image: runmymind/liveforspeed
   volumes:
     - ~/lfs/setup-s2.cfg:/home/lfs/app/setup.cfg
+    - ~/lfs/welcome.txt:/home/lfs/app/welcome.txt    
   restart: always
 lfs-s3:
   image: runmymind/liveforspeed
   volumes:
     - ~/lfs/setup-s3.cfg:/home/lfs/app/setup.cfg
+    - ~/lfs/welcome.txt:/home/lfs/app/welcome.txt    
   restart: always
