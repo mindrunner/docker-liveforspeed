@@ -22,12 +22,12 @@ RUN useradd -ms /bin/bash lfs
 USER lfs
 
 RUN mkdir /home/lfs/app
-RUN mkdir /home/lfs/data
 
 WORKDIR /home/lfs/app
 
 RUN curl -o lfs-server.zip https://www.lfs.net/download/LFS_S3_DCON_6Q.zip \
     && unzip lfs-server.zip \
-    && rm lfs-server.zip
+    && rm lfs-server.zip \
+    && rm setup.cfg
     
-CMD wine DCon.exe /cfg=/home/lfs/data/setup.cfg
+CMD wine DCon.exe /cfg=setup.cfg
