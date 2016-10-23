@@ -19,10 +19,14 @@ RUN dnf -q upgrade -y && \
 
 RUN useradd -ms /bin/bash lfs
 USER lfs
-WORKDIR /home/lfs
 
+RUN mkdir /home/lfs/app
+RUN mkdir /home/lfs/data
 
+WORKDIR /home/lfs/app
 
-
-
-CMD /home/lfs/lfs.sh
+RUN curl -o lfs-server.zip https://www.lfs.net/download/LFS_S3_DCON_6Q.zip \
+    && unzip lfs-server.zip \
+    && rm lfs-server.zip \
+    
+CMD wine DCon.exe /cfg=/home/lfs/data/setup.cfg
