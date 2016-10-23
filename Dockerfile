@@ -9,6 +9,7 @@ RUN dnf -q upgrade -y && \
         libstdc++.i686 \
         python \
         wine \
+        unzip \
         xorg-x11-server-Xvfb \
         && dnf clean all \
         && rm -rf \
