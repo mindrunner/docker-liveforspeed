@@ -25,7 +25,7 @@ RUN mkdir /home/lfs/app
 
 WORKDIR /home/lfs/app
 
-RUN curl -o lfs-server.zip https://www.lfs.net/download/LFS_S3_DCON_6U.zip \
+RUN curl -o lfs-server.zip https://www.lfs.net/download/LFS_S3_DCON_6V.zip \
     && unzip lfs-server.zip \
     && rm lfs-server.zip \
     && rm setup.cfg

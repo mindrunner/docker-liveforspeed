@@ -1,35 +1,39 @@
-lfs-demo:
+demo:
   image: runmymind/liveforspeed
   volumes:
     - ~/lfs/setup-demo.cfg:/home/lfs/app/setup.cfg
     - ~/lfs/welcome.txt:/home/lfs/app/welcome.txt
+    - ~/lfs/deb-demo.log:/home/lfs/app/deb.log
   ports:
     - "63390:63390"
     - "63390:63390/udp"
   restart: always
-lfs-s1:
+s1:
   image: runmymind/liveforspeed
   volumes:
     - ~/lfs/setup-s1.cfg:/home/lfs/app/setup.cfg
     - ~/lfs/welcome.txt:/home/lfs/app/welcome.txt
+    - ~/lfs/deb-s1.log:/home/lfs/app/deb.log
   ports:
     - "63391:63391"
     - "63391:63391/udp"
   restart: always  
-lfs-s2:
+s2:
   image: runmymind/liveforspeed
   volumes:
     - ~/lfs/setup-s2.cfg:/home/lfs/app/setup.cfg
     - ~/lfs/welcome.txt:/home/lfs/app/welcome.txt    
+    - ~/lfs/deb-s2.log:/home/lfs/app/deb.log
   ports:
     - "63392:63392"
     - "63392:63392/udp"
   restart: always
-lfs-s3:
+s3:
   image: runmymind/liveforspeed
   volumes:
     - ~/lfs/setup-s3.cfg:/home/lfs/app/setup.cfg
     - ~/lfs/welcome.txt:/home/lfs/app/welcome.txt    
+    - ~/lfs/deb-s3.log:/home/lfs/app/deb.log
   ports:
     - "63393:63393"
     - "63393:63393/udp"
